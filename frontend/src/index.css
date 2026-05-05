@@ -420,6 +420,7 @@ ul {
 /* Hero Banner */
 .hero-banner {
   display: flex;
+  justify-content: center;
   position: relative;
   border-radius: 0;
   margin-top: 0;
@@ -428,7 +429,8 @@ ul {
 }
 .hero-container {
   display: flex;
-  width: 100%;
+  flex: 1;
+  max-width: 1280px;
 }
 .teal-banner {
   background-color: #0c4d5c;
