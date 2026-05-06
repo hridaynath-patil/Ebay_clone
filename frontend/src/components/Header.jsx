@@ -15,11 +15,11 @@ function Header({ cartCount, cartItems = [] }) {
             <a href="#">Help & Contact</a>
           </div>
           <div className="top-nav-links">
-            <a href="#">Ship to</a>
-            <a href="#">Sell</a>
-            <span className="nav-dropdown">Watchlist <ChevronDown size={14} style={{marginLeft: '2px', opacity: 0.7}}/></span>
+            <a href="#" style={{marginLeft: '3px', marginRight: '10px'}}>Ship to</a>
+            <a href="#" style={{marginLeft: '3px', marginRight: '20px'}}>Sell</a>
+            <span className="nav-dropdown" style={{marginLeft: '3px', marginRight: '3px'}} >Watchlist <ChevronDown size={14} style={{marginLeft: '3px', opacity: 0.7}}/></span>
             <div className="nav-dropdown hover-menu-container">
-              <span>My eBay <ChevronDown size={14} style={{marginLeft: '2px', opacity: 0.7, verticalAlign: 'middle'}}/></span>
+              <span style={{marginLeft: '3px', marginRight: '3px'}}>My eBay <ChevronDown size={14} style={{marginLeft: '3px', opacity: 0.7, verticalAlign: 'middle'}}/></span>
               <div className="hover-menu">
                 <ul>
                   <li><a href="#">Summary</a></li>
@@ -42,7 +42,7 @@ function Header({ cartCount, cartItems = [] }) {
                 </ul>
               </div>
             </div>
-            <Bell size={20} />
+            <Bell style={{marginLeft: '8px', marginRight: '8px'}} size={20} />
             <div className="cart-icon-wrapper" onClick={() => navigate('/cart')}>
               <ShoppingCart size={20} />
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
@@ -80,7 +80,7 @@ function Header({ cartCount, cartItems = [] }) {
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay" style={{height: '44px'}} />
           </Link>
 
-          <div style={{display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer', fontSize: '12px', color: '#555', lineHeight: 1.2}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer', fontSize: '10px', color: '#555', lineHeight: 1.2}}>
             <span>Shop by<br/>category</span> <ChevronDown size={16} style={{opacity: 0.7}} />
           </div>
 
@@ -94,7 +94,7 @@ function Header({ cartCount, cartItems = [] }) {
             </div>
             
             <button className="search-btn">Search</button>
-            <span style={{fontSize: '12px', color: '#555', cursor: 'pointer', marginLeft: '5px', marginRight: '25px'}}>Advanced</span>
+            <span style={{fontSize: '10px', color: '#555', cursor: 'pointer', marginLeft: '5px', marginRight: '25px'}}>Advanced</span>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ function Header({ cartCount, cartItems = [] }) {
             <li><a href="#">Sporting goods</a></li>
             <li><a href="#">Business and industrial</a></li>
             <li className="nav-dropdown hover-menu-container" style={{marginLeft: 'auto'}}>
-              <span>More <ChevronDown size={14} style={{marginRight: '100px', verticalAlign: 'middle'}}/></span>
+              <span>More <ChevronDown size={14} style={{marginRight: '125px', verticalAlign: 'middle'}}/></span>
               <div className="hover-menu" style={{right: 0, left: 'auto', top: '100%'}}>
                 <ul>
                   <li><a href="#">Jewelry and watches</a></li>
