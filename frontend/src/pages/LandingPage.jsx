@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PlayCircle, ChevronLeft, ChevronRight, Pause, Play, Heart } from 'lucide-react';
+import { PlayCircle, ChevronLeft, ChevronRight, Pause, Play, Heart, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const heroSlides = [
@@ -341,32 +341,84 @@ function LandingPage() {
         </div>
       </div>
       
-      {/* Footer Mock */}
-      <footer className="mock-footer">
-        <div className="footer-cols">
-          <div className="footer-col">
-            <h4>Buy</h4>
-            <a href="#">Registration</a>
-            <a href="#">Bidding & buying help</a>
-            <a href="#">Stores</a>
+      {/* Footer */}
+      <footer className="footer-full">
+        <div className="container">
+          <div className="footer-cols">
+            <div className="footer-col">
+              <h4>Buy</h4>
+              <a href="#">Registration</a>
+              <a href="#">Bidding & buying help</a>
+              <a href="#">Stores</a>
+              <a href="#">Creator Collections</a>
+              <a href="#">eBay for Charity</a>
+              <a href="#">Charity Shop</a>
+              <a href="#">Seasonal Sales and events</a>
+              <a href="#">eBay Gift Cards</a>
+            </div>
+            
+            <div className="footer-col">
+              <h4>Sell</h4>
+              <a href="#">Start selling</a>
+              <a href="#">How to sell</a>
+              <a href="#">Business sellers</a>
+              <a href="#">Affiliates</a>
+              
+              <h4 className="footer-subheading">Tools & apps</h4>
+              <a href="#">Developers</a>
+              <a href="#">Security center</a>
+              <a href="#">Site map</a>
+            </div>
+            
+            <div className="footer-col">
+              <h4>eBay companies</h4>
+              <a href="#">TCGplayer</a>
+              
+              <h4 className="footer-subheading">Stay connected</h4>
+              <a href="#" className="footer-social"><span className="social-icon facebook-icon">f</span> Facebook</a>
+              <a href="#" className="footer-social"><span className="social-icon twitter-icon">𝕏</span> X (Twitter)</a>
+            </div>
+            
+            <div className="footer-col">
+              <h4>About eBay</h4>
+              <a href="#">Company info</a>
+              <a href="#">News</a>
+              <a href="#">Deferred Prosecution Agreement with<br/>District of Massachusetts</a>
+              <a href="#">Investors</a>
+              <a href="#">Careers</a>
+              <a href="#">Diversity & Inclusion</a>
+              <a href="#">Global Impact</a>
+              <a href="#">Government relations</a>
+              <a href="#">Advertise with us</a>
+              <a href="#">Policies</a>
+              <a href="#">Verified Rights Owner (VeRO) Program</a>
+              <a href="#">eCI Licenses</a>
+              <a href="#">Product Safety Tips</a>
+            </div>
+            
+            <div className="footer-col">
+              <h4>Help & Contact</h4>
+              <a href="#">Seller Center</a>
+              <a href="#">Contact Us</a>
+              <a href="#">eBay Returns</a>
+              <a href="#">eBay Money Back Guarantee</a>
+              
+              <h4 className="footer-subheading">Community</h4>
+              <a href="#">Announcements</a>
+              <a href="#">eBay Community</a>
+              <a href="#">eBay for Business Podcast</a>
+              
+              <h4 className="footer-subheading">eBay Sites</h4>
+              <div className="region-selector">
+                <span className="flag-icon">🇺🇸</span>
+                <span>United States</span>
+                <ChevronDown size={14} className="region-chevron" />
+              </div>
+            </div>
           </div>
-          <div className="footer-col">
-            <h4>Sell</h4>
-            <a href="#">Start selling</a>
-            <a href="#">How to sell</a>
-            <a href="#">Business sellers</a>
-          </div>
-          <div className="footer-col">
-            <h4>About eBay</h4>
-            <a href="#">Company info</a>
-            <a href="#">News</a>
-            <a href="#">Investors</a>
-          </div>
-          <div className="footer-col">
-            <h4>Help & Contact</h4>
-            <a href="#">Seller Center</a>
-            <a href="#">Contact Us</a>
-            <a href="#">eBay Returns</a>
+          
+          <div className="footer-bottom">
+            <p>Copyright © 1995-2024 eBay Inc. All Rights Reserved. <a href="#">Accessibility</a>, <a href="#">User Agreement</a>, <a href="#">Privacy</a>, <a href="#">Consumer Health Data</a>, <a href="#">Payments Terms of Use</a>, <a href="#">Cookies</a>, <a href="#">CA Privacy Notice</a>, <a href="#">Your Privacy Choices</a> and <a href="#">AdChoice</a></p>
           </div>
         </div>
       </footer>

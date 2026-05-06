@@ -15,7 +15,7 @@ function Header({ cartCount, cartItems = [] }) {
             <a href="#">Help & Contact</a>
           </div>
           <div className="top-nav-links">
-            <a href="#" style={{marginLeft: '3px', marginRight: '10px'}}>Ship to</a>
+            <a href="#" style={{marginLeft: '3px', marginRight: 'px'}}>Ship to</a>
             <a href="#" style={{marginLeft: '3px', marginRight: '20px'}}>Sell</a>
             <span className="nav-dropdown" style={{marginLeft: '3px', marginRight: '3px'}} >Watchlist <ChevronDown size={14} style={{marginLeft: '3px', opacity: 0.7}}/></span>
             <div className="nav-dropdown hover-menu-container">

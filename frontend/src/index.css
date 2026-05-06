@@ -965,28 +965,102 @@ ul {
   transition: left 0.1s ease-out;
 }
 
-/* Footer Mock */
-.mock-footer {
+/* Footer Full */
+.footer-full {
   border-top: 1px solid var(--border-color);
-  padding: 40px 0;
-  margin-top: 40px;
-  font-size: 12px;
+  background-color: #f7f7f7;
+  padding: 40px 0 30px;
+  margin-top: 60px;
+  font-size: 11px;
 }
+
 .footer-cols {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
+
+.footer-col {
+  flex: 1;
+}
+
 .footer-col h4 {
-  margin-bottom: 16px;
-  color: var(--text-dark);
+  font-size: 13px;
+  color: #191919;
+  margin-bottom: 12px;
 }
+
+.footer-subheading {
+  margin-top: 24px;
+}
+
 .footer-col a {
   display: block;
-  color: var(--text-light);
+  color: #767676;
+  text-decoration: none;
   margin-bottom: 8px;
+  line-height: 1.4;
 }
+
 .footer-col a:hover {
   text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.facebook-icon { background-color: #767676; }
+.twitter-icon { background-color: transparent; color: #767676; font-size: 12px; }
+
+.region-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  color: #191919;
+  font-size: 12px;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.region-selector:hover {
+  background: #f7f7f7;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  color: #767676;
+  text-align: left;
+}
+
+.footer-bottom a {
+  display: inline;
+  color: #767676;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #191919;
 }
 
 /* Cell Phones Product Grid */
