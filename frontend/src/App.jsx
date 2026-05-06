@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/Ebay_clone">
       <div className="app">
         <Header cartCount={cartItems.length} cartItems={cartItems} />
         <Routes>
