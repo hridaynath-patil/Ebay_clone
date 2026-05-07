@@ -75,7 +75,7 @@ def get_product(product_id: int):
 
 def _get_mock_products():
     return [
-        {"id": 1, "name": "Apple iPhone 15 Pro - 256GB - Natural Titanium (Unlocked)", "price": 999.00, "description": "Brand new, sealed. Factory unlocked for all carriers.", "image_url": "https://i.ebayimg.com/images/g/bJ0AAOSwjJdlD-o3/s-l500.webp", "condition": "New", "shipping_cost": 0.00},
+        {"id": 1, "name": "Apple iPhone 15 Pro - 256GB - Natural Titanium (Unlocked)", "price": 999.00, "description": "Brand new, sealed. Factory unlocked for all carriers.", "image_url": "https://i.ebayimg.com/images/g/dp8AAeSwUoNpJNPZ/s-l1600.webp", "condition": "New", "shipping_cost": 0.00},
         {"id": 2, "name": "Samsung Galaxy S24 Ultra - 512GB - Titanium Black", "price": 1199.99, "description": "Latest Samsung flagship. Includes S Pen.", "image_url": "https://i.ebayimg.com/images/g/bJ0AAOSwjJdlD-o3/s-l500.webp", "condition": "New", "shipping_cost": 0.00},
         {"id": 3, "name": "Google Pixel 8 Pro - 128GB - Obsidian (Unlocked)", "price": 749.00, "description": "Excellent condition, barely used.", "image_url": "https://i.ebayimg.com/images/g/bJ0AAOSwjJdlD-o3/s-l500.webp", "condition": "Open Box", "shipping_cost": 5.99},
         {"id": 4, "name": "Apple iPhone 14 - 128GB - Midnight (Unlocked)", "price": 599.99, "description": "Refurbished in excellent condition. Battery health 100%.", "image_url": "https://i.ebayimg.com/images/g/bJ0AAOSwjJdlD-o3/s-l500.webp", "condition": "Refurbished", "shipping_cost": 0.00},

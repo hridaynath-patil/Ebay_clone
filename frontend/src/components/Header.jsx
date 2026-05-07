@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, Bell, ChevronDown, Search } from 'lucide-react';
+import './Header.css';
 
 function Header({ cartCount, cartItems = [] }) {
   const navigate = useNavigate();
@@ -105,7 +106,15 @@ function Header({ cartCount, cartItems = [] }) {
             <li><a href="#">eBay Live</a></li>
             <li><a href="#">Saved</a></li>
             <li><a href="#">Motors</a></li>
-            <li><Link to="/electronics">Electronics</Link></li>
+            <li className="nav-dropdown hover-menu-container">
+              <Link to="/electronics">Electronics <ChevronDown size={14} style={{marginLeft: '2px', verticalAlign: 'middle', opacity: 0.7}}/></Link>
+              <div className="hover-menu">
+                <ul>
+                  <li><Link to="/electronics/accessories">Cell Phones & Accessories</Link></li>
+                  <li><Link to="/electronics">Cell Phones & Smartphones</Link></li>
+                </ul>
+              </div>
+            </li>
             <li><a href="#">Collectibles</a></li>
             <li><a href="#">Home and garden</a></li>
             <li><a href="#">Clothing, shoes and accessories</a></li>

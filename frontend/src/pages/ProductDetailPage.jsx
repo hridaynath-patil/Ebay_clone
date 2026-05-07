@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { mockProducts } from '../data/mockProducts';
+import './ProductDetailsPage.css';
 
 function ProductDetailPage({ addToCart }) {
   const [product, setProduct] = useState(null);

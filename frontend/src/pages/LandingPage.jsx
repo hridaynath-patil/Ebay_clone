@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { PlayCircle, ChevronLeft, ChevronRight, Pause, Play, Heart, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import './Home.css';
+import '../components/Footer.css';
 
 const heroSlides = [
   {

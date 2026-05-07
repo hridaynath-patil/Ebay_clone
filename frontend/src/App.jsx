@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import CellPhonesPage from './pages/CellPhonesPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
+import CellPhonesAccessoriesPage from './pages/CellPhonesAccessoriesPage';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/electronics" element={<CellPhonesPage />} />
+          <Route path="/electronics/accessories" element={<CellPhonesAccessoriesPage />} />
           <Route path="/product/:id" element={<ProductDetailPage addToCart={addToCart} />} />
           <Route path="/cart" element={<CartPage cartItems={cartItems} removeFromCart={removeFromCart} />} />
         </Routes>

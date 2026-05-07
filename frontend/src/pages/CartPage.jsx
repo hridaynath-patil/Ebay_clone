@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './CartPage.css';
 
 function CartPage({ cartItems, removeFromCart }) {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
