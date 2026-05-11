@@ -13,11 +13,11 @@ function ProductDetailPage({ addToCart }) {
 
   useEffect(() => {
     fetch(`http://localhost:8000/api/products/${id}`)
-      .then(res => res.json())
-      .then(data => setProduct(data))
+      .then(res => res.json()) //converts to json
+      .then(data => setProduct(data)) //save the react state
       .catch(err => {
         const found = mockProducts.find(p => p.id === parseInt(id));
-        setProduct(found);
+        setProduct(found);//fallback to mock data if backend is offline
       });
   }, [id]);
 

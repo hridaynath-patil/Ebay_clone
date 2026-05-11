@@ -95,3 +95,26 @@
 .footer-bottom a:hover {
   color: #191919;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-cols {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 24px;
+  }
+  
+  .footer-col {
+    text-align: left;
+  }
+  
+  .footer-subheading {
+    margin-top: 16px;
+  }
+  
+  .footer-bottom {
+    padding: 20px 24px;
+    text-align: center;
+  }
+}
+

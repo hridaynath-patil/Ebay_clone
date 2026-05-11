@@ -92,16 +92,47 @@ function LandingPage() {
 
   return (
     <div className="container landing-page">
-      {/* 1. Hero Banner */}
+      {/* Top Mobile Nav - Horizontal Scroll */}
+      <div className="mobile-top-nav">
+        <a href="#" className="active">Home</a>
+        <a href="#">Saved</a>
+        <a href="#">Motors</a>
+        <a href="#">Electronics</a>
+        <a href="#">Collectibles</a>
+        <a href="#" className="nav-more">More <ChevronDown size={14} /></a>
+      </div>
+
+      {/* 1. Your recently viewed items */}
+      <div className="section-header">
+        <h2>Your recently viewed items</h2>
+      </div>
+      <div className="horizontal-scroll recently-viewed">
+        {[
+          { id: 101, name: "Apple Watch Series SE 2nd Gen 40mm GPS + WiFi + Cellular...", price: "$112.99", img: "https://i.ebayimg.com/images/g/wfkAAOSwOWNkUu9T/s-l500.webp" },
+          { id: 102, name: "Bose Solo Soundbar 2 Home Theater, Certified Refurbished", price: "$129.00", oldPrice: "$199.00", img: "https://i.ebayimg.com/images/g/dpYAAeSwrmRp-h3e/s-l500.webp" }
+        ].map(item => (
+          <div key={item.id} className="recent-item-card">
+            <div className="recent-img-wrap">
+              <div className="heart-icon-small"><Heart size={14} /></div>
+              <img src={item.img} alt={item.name} />
+            </div>
+            <div className="recent-info">
+              <div className="recent-title">{item.name}</div>
+              <div className="recent-price">{item.price}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 2. Hero Banner */}
       <div className={`hero-banner ${slide.bgClass}`}>
         <div className="hero-content">
+          <div className="hero-badge">NEW!</div>
           <h1>{slide.title}</h1>
           <p>{slide.desc}</p>
-          <button className="btn-white">{slide.btn}</button>
-          <div className="hero-footer-text">{slide.footer}</div>
+          <button className="btn-white">Sign in</button>
         </div>
         <div className="hero-image">
-          <img src="https://i.ebayimg.com/images/g/bJ0AAOSwjJdlD-o3/s-l500.webp" alt="Banner" style={{opacity: 0}} />
           <div className={slide.imgClass}></div>
         </div>
         <div className="hero-indicators">
@@ -122,23 +153,51 @@ function LandingPage() {
         </div>
       </div>
 
-      {/* 2. Shopping made easy */}
-      <div className="shopping-made-easy">
+      {/* 3. Home Speakers & Subwoofers */}
+      <div className="section-header">
         <div>
+          <h2>Home Speakers & Subwoofers</h2>
+          <p className="sub-text">Recommended for you</p>
+        </div>
+        <a href="#" className="see-all">See all</a>
+      </div>
+      <div className="horizontal-scroll">
+        {[
+          { id: 201, name: "Bose Solo Soundbar 2 Home Theater, Brand New, Latest Factory Sealed", price: "$129.47", oldPrice: "$199.00", img: "https://i.ebayimg.com/images/g/dpYAAeSwrmRp-h3e/s-l500.webp" },
+          { id: 202, name: "Bose Solo Soundbar Series II - Compact Design, Bluetooth, Clear Voice", price: "$129.95", img: "https://i.ebayimg.com/images/g/dpYAAeSwrmRp-h3e/s-l500.webp" },
+          { id: 203, name: "Bose Solo Soundbar Series II Bluetooth Speaker Compact Black", price: "$129.99", img: "https://i.ebayimg.com/images/g/dpYAAeSwrmRp-h3e/s-l500.webp" }
+        ].map(item => (
+          <div key={item.id} className="deal-card">
+            <div className="deal-image-wrap">
+              <div className="deal-heart"><Heart size={18} /></div>
+              <img src={item.img} alt={item.name} className="deal-img-placeholder" />
+            </div>
+            <div className="deal-title">{item.name}</div>
+            <div className="deal-price-row">
+              <span className="deal-price">{item.price}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 4. Shopping made easy */}
+      <div className="shopping-made-easy">
+        <div className="shopping-text">
           <h2>Shopping made easy</h2>
           <p>Enjoy reliability, secure deliveries and hassle-free returns.</p>
         </div>
         <button className="btn-black">Start now</button>
       </div>
 
-      {/* 3. eBay Live */}
+      {/* 5. eBay Live */}
       <div className="section-header">
         <div>
           <h2>eBay Live</h2>
-          <p>Tune in and shop curated experiences</p>
+          <p className="sub-text">Tune in and shop curated experiences</p>
         </div>
         <a href="#" className="see-all">See all</a>
       </div>
+
       
       <div className="scroll-wrapper">
         <button className="scroll-arrow prev" onClick={() => scroll('left')}><ChevronLeft size={20} /></button>
@@ -195,15 +254,16 @@ function LandingPage() {
           ].map((event) => (
             <div key={event.id} className="live-item">
               <div className="live-card-v2">
-                <div className="live-badge-v2">LIVE • {event.viewers}</div>
                 <div className="live-card-img" style={{backgroundImage: `url(${event.img})`}}></div>
+                <div className="live-badge-v2">LIVE</div>
+                <div className="live-viewers"><span className="red-dot-live"></span> {event.viewers}</div>
                 <div className="live-card-overlay">
                   <div className="live-card-user">
                     <img src={event.avatar} alt={event.user} className="live-user-avatar" />
                     <span>{event.user}</span>
                   </div>
                   <div className="live-play-icon">
-                    <Play size={12} fill="white" />
+                    <Play size={10} fill="white" color="white" />
                   </div>
                 </div>
               </div>
@@ -214,60 +274,39 @@ function LandingPage() {
         <button className="scroll-arrow next" onClick={() => scroll('right')}><ChevronRight size={20} /></button>
       </div>
 
-      {/* 4. Up to 60% off stylish finds for Mom */}
-      <div className="section-header" style={{marginTop: '40px'}}>
-        <h2>Up to 60% off stylish finds for Mom</h2>
+      {/* 6. Time for a spring refresh */}
+      <div className="section-header">
+        <h2>Time for a spring refresh</h2>
       </div>
-      <div className="categories-grid">
+      <div className="refresh-grid">
         {[
-          { name: 'Watches', class: 'cat-watch', img: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80' },
-          { name: 'Handbags', class: 'cat-bag', img: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=300&q=80' },
-          { name: 'Jewelry', class: 'cat-jewelry', img: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&q=80' },
-          { name: 'Pre-loved fashion', class: 'cat-fashion', img: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&q=80' },
-          { name: 'Sneakers', class: 'cat-sneakers', img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=80' },
-          { name: 'Fragrances', class: 'cat-fragrance', img: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=300&q=80' },
-          { name: 'Health and beauty', class: 'cat-beauty', img: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=300&q=80' }
-        ].map((cat, i) => (
-          <div key={i} className="cat-grid-item">
-            <div className="cat-img-box">
-              <img src={cat.img} alt={cat.name} />
+          { name: 'Vacuums', img: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=200&q=80' },
+          { name: 'Home décor', img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=200&q=80' },
+          { name: 'Home improvement', img: 'https://images.unsplash.com/photo-1581141849291-1110b9c1d30a?w=200&q=80' },
+          { name: 'Air purifiers', img: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&q=80' }
+        ].map((item, i) => (
+          <div key={i} className="refresh-item">
+            <div className="refresh-img-box">
+              <img src={item.img} alt={item.name} />
             </div>
-            <span>{cat.name}</span>
+            <span>{item.name}</span>
           </div>
         ))}
       </div>
 
-      {/* 5. Shop the world. Ship for free. (Purple banner) */}
-      <div className="promo-purple">
-        <div className="promo-purple-text">
-          <h2>Shop the world. Ship for free.</h2>
-          <p>Discover international finds with free shipping included.</p>
-          <button className="btn-white">Shop now</button>
+      {/* 7. Find your hidden gem (Yellow banner) */}
+      <div className="promo-yellow">
+        <div className="promo-yellow-content">
+          <h2>Find your hidden gem</h2>
+          <p>Rare collectibles and one-of-a-kind finds. Deals up to 20% off with code PARS2024</p>
+          <button className="btn-black">Start hunting</button>
+          <div className="promo-yellow-small">Ends 5/19. Max discount $100. Terms.</div>
         </div>
-        <div className="promo-purple-images">
-          <div className="img-box img-shoes"></div>
-          <div className="img-box img-bag"></div>
-          <div className="img-box img-lady"></div>
-          <div className="img-box img-gengar"></div>
-          <div className="img-box img-wolverine"></div>
-          <div className="img-box img-phone"></div>
+        <div className="promo-yellow-images">
+          <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?w=400&q=80" alt="Collectibles" />
         </div>
       </div>
 
-      {/* 6. 20% off top picks this season (Lime Green banner) */}
-      <div className="promo-green">
-        <div className="promo-green-text">
-          <h2>20% off top picks this season</h2>
-          <p>Upgrade your home, tech, ride, and more.</p>
-          <button className="btn-dark-green">Get the coupon</button>
-          <div className="promo-green-footer">Ends 6/2, P&C. Max $100 off. Terms.</div>
-        </div>
-        <div className="promo-green-images">
-          <div className="img-float img-vacuum"></div>
-          <div className="img-float img-battery"></div>
-          <div className="img-float img-monitor"></div>
-        </div>
-      </div>
 
       {/* 7. Today's Deals */}
       <div className="section-header" style={{marginTop: '40px'}}>

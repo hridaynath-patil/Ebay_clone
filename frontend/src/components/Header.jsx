@@ -87,16 +87,16 @@ function Header({ cartCount, cartItems = [] }) {
 
           <div style={{display: 'flex', flexGrow: 1, alignItems: 'center', gap: '8px'}}>
             <div className="search-container">
-              <Search size={20} color="#767676" style={{marginLeft: '14px', minWidth: '20px'}} />
               <input type="text" className="search-input" placeholder="Search for anything" />
               <select className="search-category">
                 <option>All Categories</option>
               </select>
             </div>
             
-            <button className="search-btn">Search</button>
+            <button className="search-btn"><Search size={20} /></button>
             <span style={{fontSize: '10px', color: '#555', cursor: 'pointer', marginLeft: '5px', marginRight: '25px'}}>Advanced</span>
           </div>
+
         </div>
       </div>
       

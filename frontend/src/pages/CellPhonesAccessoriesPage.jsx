@@ -105,6 +105,7 @@ function CellPhonesAccessoriesPage() {
         <h1>Cell Phones, Smart Watches & Accessories</h1>
       </header>
 
+
       <div className="accessories-layout">
         <aside className="accessories-sidebar">
           <div className="sidebar-section">
@@ -179,51 +180,91 @@ function CellPhonesAccessoriesPage() {
             </div>
           </section>
 
+          {/* Make your wrist unique and smart */}
           <section className="promo-section">
-            <h2>Make your wrist unique and smart</h2>
-            <div className="grid-2-col">
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/vtsAAeSwgCJox-hY/s-l960.webp" alt="Smartwatches" />
+            <h2 className="section-title-alt">Make your wrist unique and smart</h2>
+            <div className="horizontal-scroll">
+              <div className="acc-promo-card">
+                <img src="https://i.ebayimg.com/images/g/vtsAAeSwgCJox-hY/s-l960.webp" alt="Watch Bands" />
               </div>
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/xhkAAeSw1JRox-hb/s-l960.webp" alt="Smartwatch accessories" />
+              <div className="acc-promo-card">
+                <img src="https://i.ebayimg.com/images/g/xhkAAeSw1JRox-hb/s-l960.webp" alt="Watch Bands" />
               </div>
             </div>
           </section>
 
+          {/* Additional tools to pair with */}
           <section className="promo-section">
-            <h2>Additional tools to pair with</h2>
-            <div className="grid-3-col">
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/2lAAAeSweZlox-w4/s-l960.webp" alt="SIM cards" />
+            <h2 className="section-title-alt">Additional tools to pair with</h2>
+            <div className="horizontal-scroll">
+              <div className="acc-promo-card-small">
+                <img src="https://i.ebayimg.com/images/g/2lAAAeSweZlox-w4/s-l960.webp" alt="SIM" />
               </div>
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/32oAAeSwUgNox-w5/s-l960.webp" alt="Phone headsets" />
+              <div className="acc-promo-card-small">
+                <img src="https://i.ebayimg.com/images/g/32oAAeSwUgNox-w5/s-l960.webp" alt="Headset" />
               </div>
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/3KgAAeSwZxVox-w7/s-l960.webp" alt="Cases and covers" />
+              <div className="acc-promo-card-small">
+                <img src="https://i.ebayimg.com/images/g/3KgAAeSwZxVox-w7/s-l960.webp" alt="Cases" />
               </div>
             </div>
           </section>
 
+          {/* Give them a second chance */}
           <section className="promo-section">
-            <h2>Give them a second chance</h2>
-            <div className="grid-2-col">
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/A84AAeSwT45ox~PI/s-l960.webp" alt="Refurbished phones" />
+            <h2 className="section-title-alt">Give them a second chance</h2>
+            <div className="promo-grid-2">
+              <div className="acc-promo-card-wide">
+                <div className="wide-card-img" style={{backgroundImage: "url('https://i.ebayimg.com/images/g/A84AAeSwT45ox~PI/s-l960.webp')"}}></div>
               </div>
-              <div className="category-card-large">
-                <h3></h3>
-                <img src="https://i.ebayimg.com/images/g/7QQAAeSwtoVox~PO/s-l960.webp" alt="Vintage phones" />
+              <div className="acc-promo-card-wide">
+                <div className="wide-card-img" style={{backgroundImage: "url('https://i.ebayimg.com/images/g/7QQAAeSwtoVox~PO/s-l960.webp')"}}></div>
               </div>
             </div>
           </section>
+
+          {/* Limited free deals */}
+          <section className="promo-section">
+            <div className="section-header-alt">
+              <div>
+                <h2 className="section-title-alt">Limited free deals</h2>
+                <p className="sub-text">Free shipping included</p>
+              </div>
+            </div>
+            <div className="horizontal-scroll">
+              {[
+                { name: "Apple iPhone 14 Pro Max 256GB Unlocked Good Condition", price: "$855.48", img: "https://i.ebayimg.com/images/g/u84AAOSwXoVkV5K4/s-l500.webp" },
+                { name: "Sony WH-1000XM5 The Best Wireless Noise Canceling Headphones", price: "$289.00", img: "https://i.ebayimg.com/images/g/dpYAAeSwrmRp-h3e/s-l500.webp" }
+              ].map((item, i) => (
+                <div key={i} className="deal-card">
+                  <div className="deal-image-wrap">
+                    <img src={item.img} alt={item.name} />
+                  </div>
+                  <div className="deal-title">{item.name}</div>
+                  <div className="deal-price">{item.price}</div>
+                  <div className="deal-meta">Free shipping</div>
+                  <div className="deal-location"><span className="blue-dot"></span> Ship to Mumbai</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Tech for your trip under $20 (Lime Green Card) */}
+          <section className="promo-section-green">
+            <div className="green-promo-layout">
+              <div className="green-text-side">
+                <h2>Tech for your trip under $20</h2>
+                <p>Upgrade your journey for less.</p>
+                <button className="btn-outline-dark">Shop now</button>
+              </div>
+              <div className="green-img-side">
+                <div className="green-item-card">
+                  <img src="https://i.ebayimg.com/images/g/6KgAAeSwZxVox-w7/s-l500.webp" alt="Trip tech" />
+                  <div className="green-item-price">$17.50</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
 
           <div className="accessory-grid">
             {accessoryProducts.map(product => (
